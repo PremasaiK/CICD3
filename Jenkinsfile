@@ -52,7 +52,7 @@ pipeline{
 							echo "env : ${env.POD_NAME}"
 							}catch(error)
 							{
-							 sh 'ssh premasai@127.0.0.1 kubectl create -f deployment.yaml'
+							 echo "came here"
 							}
 					}
 				}
