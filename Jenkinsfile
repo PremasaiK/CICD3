@@ -41,7 +41,7 @@ pipeline{
 					script{
 						try{
 							sh 'ssh premasai@127.0.0.1 kubectl apply -k ./'
-							sh 'ssh premasai@127.0.0.1 kubectl get pods | grep wordpress*'
+							sh 'ssh premasai@127.0.0.1 kubectl get pods | grep wordpress'
 							sleep 5
 							ret1 = sh ( script:'ssh premasai@127.0.0.1 kubectl get pods | grep wordpress | awk \'{print $3}\'',returnStdout: true).trim()
 							println ret1
