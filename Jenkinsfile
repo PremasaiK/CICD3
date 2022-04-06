@@ -9,11 +9,11 @@ pipeline{
 
 	stages {
 
-    /*
+    
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t premasaik/kubernetes-101:v3 .'
+				sh 'docker build -t premasaik/wordpress .'
 			}
 		}
 
@@ -27,10 +27,10 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push premasaik/kubernetes-101:v3'
+				sh 'docker push premasaik/wordpress'
 			}
 		}
-		*/
+		/*
 		stage('Deploy to K8s')
 		{
 			steps{
@@ -58,6 +58,7 @@ pipeline{
 				}
 			}
 		}
+		*/
 	}
 
 	post {
